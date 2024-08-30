@@ -38,7 +38,7 @@ return cuisines[faker.number.int({ min: 0, max: cuisines.length - 1 })];
 function generateMockDestination() {
   return {
     CityName: faker.location.city(),
-    attractions: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, () => faker.lorem.sentence()),
+    attractions: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, () => faker.company.name()),
     hotels: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, () => faker.company.name()),
     transports: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, generateRandomTransport),
     weather: generateRandomWeather(),
@@ -59,4 +59,4 @@ async function seedDB() {
   }
 }
 
-seedDB(100);
+seedDB();

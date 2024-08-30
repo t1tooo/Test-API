@@ -13,5 +13,4 @@ const destinationSchema = new mongoose.Schema({
 });
 
 const Destination = mongoose.model('Destination', destinationSchema);
-
 export default Destination;
