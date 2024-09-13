@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import mongoosePaginate from 'mongoose-paginate-v2';
 
 const destinationSchema = new mongoose.Schema({
   CityName: String,
@@ -11,6 +12,8 @@ const destinationSchema = new mongoose.Schema({
   },
   cuisine: [String],
 });
+
+destinationSchema.plugin(mongoosePaginate);
 
 const Destination = mongoose.model('Destination', destinationSchema);
 export default Destination;
